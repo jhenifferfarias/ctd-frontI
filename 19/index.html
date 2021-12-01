@@ -4,130 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 19 - Flexbox 2/2</title>
-    <link rel="stylesheet" href="style.css">
-    <style type="text/css">
-
-        .conteudo-flexivel {
-            /* Conteúdo Flexível */
-            display: flex;
-        }
-
-        .espacamento-externo {
-            /* Espaçamento entre os itens */
-            gap: 5px;
-        }
-
-        .expandir {
-            flex-grow: 1;
-        }
-
-        .expandir-dobro {
-            flex-grow: 2;
-        }
-        
-        .expandir-triplo {
-            flex-grow: 3;
-        }
-
-        .dimensao-minima {
-            flex-basis: 250px;
-        }
-
-        .encolher {
-            flex-shrink: 1;
-        }
-
-        .encolher-dobro {
-            flex-shrink: 2;
-        }
-
-        .encolher-tiplo {
-            flex-shrink: 3;
-        }
-
-        .definir-ordem__primeiro {
-            order: 1;
-        }
-
-        .definir-ordem__segundo {
-            order: 2;
-        }
-
-        .definir-ordem__terceiro {
-            order: 3;
-        }
-
-        .alinhar-se__inicio {
-            align-self: start;
-        }
-
-        .alinhar-se__centro {
-            align-self: center;
-        }
-
-        .alinhar-se__final {
-            align-self: end;
-        }
-
-    </style>
+    <title>Mesa de trabalho</title>
 </head>
-<body>
+
+<style type="text/css">
     
-    <article class="conteudo">
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        box-sizing: border-box;
+                
+    }
 
-        <h1 class="conteudo__titulo">Design flexível 2/2</h1>
+        /*  1. Liste todos os itens verticalmente.    */
+    .lista {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: center;
+        background-color:#5d9dec;
 
-        <section class="conteudo__sessao">
-            <h2 class="conteudo__subtitulo">Define a expansão do item.<br>flex-grow</h2>
-            <div class="conteudo-flexivel espacamento-externo">
-                <div class="conteudo-flexivel__item expandir">1</div>
-                <div class="conteudo-flexivel__item expandir-triplo">2</div>
-                <div class="conteudo-flexivel__item expandir-triplo">3</div>
-                <div class="conteudo-flexivel__item expandir">4</div>
-            </div>
-        </section>
+    }
 
-        <section class="conteudo__sessao">
-            <h2 class="conteudo__subtitulo">Define a proporção ou dimensão mínima inicial do item.<br>flex-basis</h2>
-            <div class="conteudo-flexivel espacamento-externo">
-                <div class="conteudo-flexivel__item expandir dimensao-minima">1</div>
-                <div class="conteudo-flexivel__item expandir">2</div>
-                <div class="conteudo-flexivel__item expandir">3</div>
-            </div>
-        </section>
+    .list-item__top {
+        width: 500px;
+        border-bottom: 1px solid #CCC;  
+        margin-top: 10px;       
+    }
 
-        <section class="conteudo__sessao">
-            <h2 class="conteudo__subtitulo">Define a proporção de encolhimento do item.<br>flex-shrink</h2>
-            <div class="conteudo-flexivel espacamento-externo">
-                <div class="conteudo-flexivel__item expandir dimensao-minima encolher">1</div>
-                <div class="conteudo-flexivel__item expandir dimensao-minima encolher-dobro">2</div>
-                <div class="conteudo-flexivel__item expandir dimensao-minima encolher-tiplo">3</div>
-            </div>
-        </section>
+    .list-item {
+        width: 500px;
+        border-bottom: 1px solid #CCC;  
+       
+    }   
 
-        <section class="conteudo__sessao">
-            <h2 class="conteudo__subtitulo">Altera a ordem do item.<br>order</h2>
-            <div class="conteudo-flexivel espacamento-externo">
-                <div class="conteudo-flexivel__item expandir definir-ordem__segundo">1</div>
-                <div class="conteudo-flexivel__item expandir definir-ordem__terceiro">2</div>
-                <div class="conteudo-flexivel__item expandir definir-ordem__primeiro">3</div>
-            </div>
-        </section>
+    
+    .list-item__bottom {
+        width: 500px;
+        border-bottom: 1px solid #CCC;  
+        margin-bottom: 30px;     
+    }
 
-        <section class="conteudo__sessao">
-            <h2 class="conteudo__subtitulo">Alinha individualmente um item na vertical.<br>align-self</h2>
-            <div 
-                class="conteudo-flexivel espacamento-externo"
-                style="height: 400px;"
-            >
-                <div class="conteudo-flexivel__item expandir alinhar-se__inicio">1</div>
-                <div class="conteudo-flexivel__item expandir alinhar-se__centro">2</div>
-                <div class="conteudo-flexivel__item expandir alinhar-se__final">3</div>
-            </div>
-        </section>
+    /*        2. Implemente o cartão de cada item conforme a imagem referência.    */
+    .cartao {
+        display:flex;
+        background-color: white;
+        margin-top: 20px;               
+    }
 
-    </article>
+    .cartao__imagem {
+        border-radius: 100%;
+    }
+
+    .cartao__corpo {
+        background-color: white;
+        margin: 20px 0; 
+    }
+
+    .cartao__endereco {
+        color: gray;
+    }
+
+    .cartao__titulo{
+        margin-bottom: 1px;
+    }
+
+    .cartao__endereco{
+        margin-top: 1px ;
+    }
+   
+
+</style>
+<body>
+
+    <!--        Você deverá manipular a classe 'lista' para controlar o posicionamento dos itens. 
+        Busque aproximar-se ao máximo da imagem do resultado sedida pelo professor.    -->
+
+    <ul class="lista">
+        <li class="list-item__top">
+            <!-- 
+                Dica: Você deverá montar o design do cartão utilizando Flexbox também,
+                ou seja, você irá transformar o item em um conteúdo flexível com a propriedade display:flex.
+            -->
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/93.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">&nbsp;&nbsp;&nbsp;Linda Hart</h4>
+                    <p class="cartao__endereco">&nbsp;&nbsp;&nbsp;6765 Shady Ln Dr</p>
+                </figcaption>
+            </figure>
+        </li>
+      
+        <li class="list-item">
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/46.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">&nbsp;&nbsp;&nbsp;Roger Medina</h4>
+                    <p class="cartao__endereco">&nbsp;&nbsp;&nbsp;2420 Paddock Way</p>
+                </figcaption>
+            </figure>
+        </li>
+        
+        <li class="list-item">
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/59.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">&nbsp;&nbsp;&nbsp;Dean Sullivan</h4>
+                    <p class="cartao__endereco">&nbsp;&nbsp;&nbsp;6727 Airplane Ave</p>
+                </figcaption>
+            </figure>
+        </li>
+       
+        <li class="list-item__bottom">
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/78.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">&nbsp;&nbsp;&nbsp;Elizabeth Austin</h4>
+                    <p class="cartao__endereco">&nbsp;&nbsp;&nbsp;6685 Blossom Hill Rd</p>
+                </figcaption>
+            </figure>
+        </li>
+        
+      </ul>
 
 </body>
 </html>
